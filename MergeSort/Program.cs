@@ -11,6 +11,12 @@ namespace MergeSort
 		const bool debug = false;
 		static int itemsOut = 0;
 
+		/// <summary>
+		/// Merge sort the given sorted collections.
+		/// </summary>
+		/// <typeparam name="T">The type contained within the collections.</typeparam>
+		/// <param name="streamsIn">The collections to merge. EVERY COLLECTION MUST BE SORTED.</param>
+		/// <returns>The aggregate of all items in streamsIn, in order.</returns>
 		public static IEnumerable<T> Merge<T>(params IEnumerable<T>[] streamsIn) where T : IComparable<T>
 		{
 			var streams = new List<IEnumerator<T>>(streamsIn.Length);
